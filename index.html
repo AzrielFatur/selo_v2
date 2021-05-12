@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | SELO-ID</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+
+  <!-- ... -->
+  <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+  </style>
+</head>
+    <body class="bg-gray-100">
+    <main class="py-15">
+
+        <div class="flex justify-center mb-7">
+            <h1 class="text-5xl font-bold">SELO-ID</h1>
+        </div>
+        
+        <div class="flex items-center justify-center">
+            <div class="xl:w-3/5 w-full bg-white border-2 mx-auto py-10 px-5">
+                
+                <h1 class="text-xl font-semibold border-l-4 border-gray-900 pl-4 mb-7">Detail Produk</h1>
+                <div class="mb-5">
+                    <label class="block text-sm font-medium text-gray-700">Foto</label>
+                    <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                        <div class="space-y-1 text-center">
+                            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="flex text-sm text-gray-600">
+                                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                    <span>Unggah Foto</span>
+                                    <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                </label>
+                                <p class="pl-1">atau drag & drop</p>
+                            </div>
+                            <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mb-10">
+                    <div>
+                        <label for="ukuran" class="block text-sm font-medium text-gray-700">Ukuran</label>
+                        <input type="number" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2" placeholder="Ukuran">
+                    </div>
+
+                    <div>
+                        <label for="merek" class="block text-sm font-medium text-gray-700">Merek</label>
+                        <select name="merek" id="merek" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2">
+                            <option value="">Pilih Merek</option>
+                            <option value="Onitsuka">Onitsuka</option>
+                            <option value="League">League</option>
+                            <option value="Nike">Nike</option>
+                            <option value="Adidas">Adidas</option>
+                            <option value="Puma">Puma</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                        <input type="text" name="merek_lainnya" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2 hidden">
+                    </div>
+                </div>
+                
+                <h1 class="text-xl font-semibold border-l-4 border-gray-900 pl-4 mb-7">Informasi Kontak</h1>
+
+                <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mb-10">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+                        <input type="text" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2" placeholder="Nama">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="text" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2" placeholder="Email">
+                    </div>
+
+                    <div>
+                        <label for="phone_number" class="block text-sm font-medium text-gray-700">Nomor Telp</label>
+                        <input type="text" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2" placeholder="Nomor Telp">
+                    </div>
+
+                </div>
+
+                <h1 class="text-xl font-semibold border-l-4 border-gray-900 pl-4 mb-7">Informasi Alamat</h1>
+
+
+                <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mb-4">
+                    <div>
+                        <label for="village" class="block text-sm font-medium text-gray-700">Kelurahan</label>
+                        <select name="village" id="village" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2">
+                            <option value="">Pilih Kelurahan</option>
+                            <option value="Mustika Jaya">Mustika Jaya</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="district" class="block text-sm font-medium text-gray-700">Kecamatan</label>
+                        <select name="district" id="district" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2">
+                            <option value="">Pilih Kecamatan</option>
+                            <option value="Mutstika Jaya">Mutstika Jaya</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="regency" class="block text-sm font-medium text-gray-700">Kota/Kabupaten</label>
+                        <select name="regency" id="regency" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2">
+                            <option value="">Pilih Kota/Kabupaten</option>
+                            <option value="Kota Bekasi">Kota Bekasi</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="province" class="block text-sm font-medium text-gray-700">Provinsi</label>
+                        <select name="province" id="province" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2">
+                            <option value="">Pilih Provinsi</option>
+                            <option value="Jawa Barat">Jawa Barat</option>
+                        </select>
+                    </div>
+
+                </div>
+                    <div class="mb-5">
+                        <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat Lengkap</label>
+                        <textarea name="alamat" id="alamat" rows="3" class="w-full bg-white border-2 rounded outline-none text-sm text-gray-500 mt-1 px-5 py-2" placeholder="Alamat Lengkap"></textarea>
+                    </div>
+
+                <button class="w-full bg-gray-900 rounded text-white text-sm py-3">Submit</button>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" defer></script>
+
+    <script>
+        $(document).ready(function() {
+            $('[name="merek"]').change( function() {
+                if($(this).val() == 'Lainnya') {
+                    $('[name="merek_lainnya"]').removeClass('hidden');
+                } else {
+                    $('[name="merek_lainnya"]').addClass('hidden');
+                }
+            });
+        });
+    </script>
+    </body>
+</html>
